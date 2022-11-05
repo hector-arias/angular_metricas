@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run tests
-        run: npm run test:headless-coverage # package.json->scripts: "test:headless-coverage": "ng test --watch=false --code-coverage --browsers=ChromeHeadless"
+        run: npm run test
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
