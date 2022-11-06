@@ -46,6 +46,49 @@ export class PlayerListComponent implements OnInit {
     }
   }
 
+   /**
+   * Add a new player to the player form array
+   */
+    addPlayer1() {
+      // Only add if new player form exist and its content is valid
+      if (!!this.newPlayerForm && this.newPlayerForm.valid) {
+        this.players.push(this.newPlayerForm);
+        // Reset new player form group
+        this.newPlayerForm = this.teamControlService.toPlayerForm();
+        // Prevent ExpressionChangedAfterItHasBeenCheckedError cause by update to multiple form groups
+        this.ref.detectChanges();
+      }
+    }
+
+
+     /**
+   * Add a new player to the player form array
+   */
+  addPlayer2() {
+    // Only add if new player form exist and its content is valid
+    if (!!this.newPlayerForm && this.newPlayerForm.valid) {
+      this.players.push(this.newPlayerForm);
+      // Reset new player form group
+      this.newPlayerForm = this.teamControlService.toPlayerForm();
+      // Prevent ExpressionChangedAfterItHasBeenCheckedError cause by update to multiple form groups
+      this.ref.detectChanges();
+    }
+  }
+
+   /**
+   * Add a new player to the player form array
+   */
+    addPlayer3() {
+      // Only add if new player form exist and its content is valid
+      if (!!this.newPlayerForm && this.newPlayerForm.valid) {
+        this.players.push(this.newPlayerForm);
+        // Reset new player form group
+        this.newPlayerForm = this.teamControlService.toPlayerForm();
+        // Prevent ExpressionChangedAfterItHasBeenCheckedError cause by update to multiple form groups
+        this.ref.detectChanges();
+      }
+    }
+
   /**
    * Remove player at the given index from the player form array
    * @param index Index of the player
